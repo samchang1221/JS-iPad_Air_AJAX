@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/samchang1221/FileStorage/main/Reset.css">
+    <style>
+        .container {
+            width: 1024px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .select {
+            width: 50%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .select-border {
+            width: 90%;
+            height: 100px;
+            margin: auto;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .select-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        input {
+            display: none;
+        }
+
+        .disable {
+            background-color: #00000050;
+        }
+
+        p {
+            font-size: 24px;
+            width: 100%;
+            margin: auto;
+            display: block;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p style="font-size: 12px;"><strong style="font-size: 36px;">購買 iPad Air</strong><br>
+            NT$19,900 起</p>
+    </div>
+    <div class="container" style="display: flex;">
+        <div class="pic" style="width: 60%;"><img
+                src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-finish-unselect-gallery-1-202207?wid=2560&hei=1440&fmt=p-jpg&qlt=95&.v=1654902977555"
+                alt="iPad Air" style="width: 100%;position: sticky;top: 10px;left: 10px;"></div>
+        <div class="select">
+            <div class="color select-flex">
+                <p><strong>外觀。</strong> 挑選喜愛的顏色。</p>
+                <div class="select">
+                    <div class="select-border color1">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-finish-space-gray-2022?wid=104&amp;hei=104&amp;fmt=png-alpha&amp;.v=1668014174971"
+                            style="width: 10%;">
+                        <input type="radio" id="color" name="color" value="太空灰色" class="color1-input">
+                        <label for="color+">太空灰色</label>
+                    </div>
+                </div>
+                <div class="select">
+                    <div class="select-border color2">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-finish-blue-2022?wid=104&amp;hei=104&amp;fmt=png-alpha&amp;.v=1668014174784"
+                            style="width: 10%;">
+                        <input type="radio" id="color" name="color" value="藍色" class="color2-input">
+                        <label for="color+">藍色</label>
+                    </div>
+                </div>
+                <div class="select">
+                    <div class="select-border color3">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-finish-pink-2022?wid=104&amp;hei=104&amp;fmt=png-alpha&amp;.v=1668014174903"
+                            style="width: 10%;">
+                        <input type="radio" id="color" name="color" value="粉紅色" class="color3-input">
+                        <label for="color+">粉紅色</label>
+                    </div>
+                </div>
+                <div class="select">
+                    <div class="select-border color4">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-finish-purple-2022?wid=104&amp;hei=104&amp;fmt=png-alpha&amp;.v=1668014175042"
+                            style="width: 10%;">
+                        <input type="radio" id="color" name="color" value="紫色" class="color4-input">
+                        <label for="color+">紫色</label>
+                    </div>
+                </div>
+                <div class="select">
+                    <div class="select-border color5">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-finish-starlight-2022?wid=102&amp;hei=102&amp;fmt=png-alpha&amp;.v=1669672818453"
+                            style="width: 10%;">
+                        <input type="radio" id="color" name="color" value="星光色" class="color5-input">
+                        <label for="color+">星光色</label>
+                    </div>
+                </div>
+            </div>
+            <div class="storage select-flex">
+                <p>
+                    <strong>儲存裝置。</strong> 選擇需要的儲存空間大小。
+                </p>
+                <div class="select">
+                    <div class="select-border storage1 disable">
+                        <input type="radio" id="storage" name="storage" value="64GB" onclick="Change_Price()"
+                            class="storage1-input">
+                        <label for="storage+">64GB<br>NT$ 19900起</label>
+                    </div>
+                </div>
+                <div class="select">
+                    <div class="select-border storage2 disable">
+                        <input type="radio" id="storage" name="storage" value="256GB" onclick="Change_Price()"
+                            class="storage2-input">
+                        <label for="storage+">256GB<br>NT$ 24900起</label>
+                    </div>
+                </div>
+            </div>
+            <div class="network select-flex">
+                <p>
+                    <strong>連線能力。</strong> 選擇連線方式。
+                </p>
+                <div class="select">
+                    <div class="select-border network1 disable">
+                        <input type="radio" id="network" name="network" value="Wi-Fi" class="network1-input">
+                        <label class="network-text1" for="network+">Wi-Fi<br>NT$ 19900起</label>
+                    </div>
+                </div>
+                <div class="select">
+                    <div class="select-border network2 disable">
+                        <input type="radio" id="network" name="network" value="Wi-Fi+行動網路" class="network2-input">
+                        <label class="network-text2" for="network+">Wi-Fi+行動網路<br>NT$ 24900起</label>
+                    </div>
+                </div>
+            </div>
+            <p class="price">
+            </p>
+        </div>
+    </div>
+
+    </div>
+    <script>
+        let xhr = new XMLHttpRequest();
+        let filter, obj, color, storage, network;
+        let pic = document.querySelector(" .pic"), price = document.querySelector(".price"), nt1 = document.querySelector(".network-text1"), nt2 = document.querySelector(".network-text2"), url = "https://raw.githubusercontent.com/samchang1221/FileStorage/main/iPad.json";
+        window.onload = function () {
+            xhr.open("GET", url);
+            xhr.send();
+        }
+        function Change_Price() {
+            storage = document.querySelector("#storage:checked").value; if (storage == "64GB") {
+                nt1.innerHTML = "Wi-Fi<br>NT$ 19900起"; nt2.innerHTML = "Wi-Fi+行動網路<br>NT$ 24900起";
+            } else {
+                nt1.innerHTML = "Wi-Fi<br>NT$ 24900起"; nt2.innerHTML = "Wi-Fi+行動網路<br>NT$ 29900起";
+            }
+        }
+        function Border_Color_Reset() {
+            let reset = document.querySelectorAll(".color>.select>.select-border");
+            reset.forEach(element => {
+                element.setAttribute("style", "border: 2px solid black;");
+            });
+        }
+        function Border_Storage_Reset() {
+            let reset = document.querySelectorAll(".storage>.select>.select-border");
+            reset.forEach(element => {
+                element.setAttribute("style", "border: 2px solid black;");
+            });
+        }
+        function Border_Network_Reset() {
+            let reset = document.querySelectorAll(".network>.select>.select-border");
+            reset.forEach(element => {
+                element.setAttribute("style", "border: 2px solid black;");
+            });
+        }
+        let color_radio_array = ["color1", "color2", "color3", "color4", "color5"];
+        let storage_radio_array = ["storage1", "storage2"];
+        let network_radio_array = ["network1", "network2"];
+        color_radio_array.forEach(element => {
+            document.getElementsByClassName(element)[0].addEventListener("click", e => { document.querySelector(`.${element}>input`).checked = true; Border_Color_Reset(); Show(); document.querySelector(`.${element}`).setAttribute("style", "border: 2px solid blue;"); Remove_Disable_Storage(); })
+        });
+        storage_radio_array.forEach(element => {
+            document.getElementsByClassName(element)[0].addEventListener("click", e => { if (document.querySelector("#color:checked")) { document.querySelector(`.${element}>input`).checked = true; Border_Storage_Reset(); Show(); Change_Price(); document.querySelector(`.${element}`).setAttribute("style", "border: 2px solid blue;"); Remove_Disable_Network(); } })
+        });
+        network_radio_array.forEach(element => {
+            document.getElementsByClassName(element)[0].addEventListener("click", e => { if (document.querySelector("#storage:checked")) { document.querySelector(`.${element}>input`).checked = true; Border_Network_Reset(); Show(); document.querySelector(`.${element}`).setAttribute("style", "border: 2px solid blue;"); } })
+        });
+        function Show() {
+            color = document.querySelector("#color:checked").value;
+            try {
+                storage = document.querySelector("#storage:checked").value;
+                network = document.querySelector("#network:checked").value;
+            } catch (error) {
+                console.log();
+            }
+            filter = obj.Products.filter(e => {
+                return e.color == color;
+            })
+            if (storage && network) {
+                filter = filter.filter(e => {
+                    return e.storage == storage;
+                })
+                filter = filter.filter(e => {
+                    return e.network == network;
+                })
+            }
+
+            //Create img
+            let img = document.createElement("img");
+            img.setAttribute("src", filter[0].url);
+            img.setAttribute("style", "width: 100%; position: sticky; top: 10px; left: 10px;");
+            pic.innerText = "";
+            pic.append(img);
+            if (document.querySelector("#color:checked") && document.querySelector("#storage:checked") && document.querySelector("#network:checked")) {
+                price.innerText = `NT$ ${filter[0].price}`;
+            }
+        }
+        function Remove_Disable_Storage() {
+            let remove = document.querySelectorAll(".storage>.select>.select-border");
+            if (!document.querySelector("#storage:checked")) {
+                remove.forEach(element => {
+                    element.classList.remove("disable");
+                    element.setAttribute("style", "background-color: white;");
+                });
+            }
+
+        }
+        function Remove_Disable_Network() {
+            let remove = document.querySelectorAll(".network>.select>.select-border");
+            if (!document.querySelector("#network:checked")) {
+                remove.forEach(element => {
+                    element.classList.remove("disable");
+                    element.setAttribute("style", "background-color: white;");
+                });
+            }
+
+        }
+        xhr.onload = function () {
+            obj = JSON.parse(xhr.response);
+        }
+    </script>
+</body>
+
+</html>
